@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Qmls/main.qml</file>
+        <file>Qmls/ButtonBackground.qml</file>
+    </qresource>
+</RCC>
