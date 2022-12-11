@@ -12,7 +12,7 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Quick Gui)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Quick Gui Network)
 
 set(SOURCES
     Source/main.cpp
@@ -23,15 +23,11 @@ set(HEADERS
     Headers/mainwindow.h
 )
 
-set(QMLS
-    Qmls/main.qml
-    Qmls/ButtonBackground.qml
-)
+
 
 set(PROJECT_SOURCES
         ${SOURCES}
         ${HEADERS}
-        ${QMLS}
         res.qrc
 )
 
@@ -65,6 +61,7 @@ target_link_libraries(AndroiApp
     Qt${QT_VERSION_MAJOR}::Quick
     Qt${QT_VERSION_MAJOR}::Qml
     Qt${QT_VERSION_MAJOR}::Core
+    Qt${QT_VERSION_MAJOR}::Network
 )
 
 set_target_properties(AndroiApp PROPERTIES

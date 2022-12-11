@@ -1,6 +1,7 @@
 <RCC>
     <qresource prefix="/">
         <file>Qmls/main.qml</file>
-        <file>Qmls/ButtonBackground.qml</file>
+        <file>Qmls/Loader1.qml</file>
+        <file>Qmls/Loader2.qml</file>
     </qresource>
 </RCC>
